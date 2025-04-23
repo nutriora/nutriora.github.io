@@ -1,0 +1,205 @@
+:root {
+  --primary-color: #2ECC71;
+  --secondary-color: #27AE60;
+  --accent-color: #F1C40F;
+  --light-bg: #cdd5de;
+  --dark-bg: #2C3E50;
+}
+
+/* Announcement Bar */
+.announcement-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1040;
+  background-color: #27AE60;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  padding: 12px 0;
+  text-align: center;
+  margin-bottom: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.announcement-bar:hover {
+  background-color: #257cc9;
+  transform: translateY(0) scale(1.03);
+}
+
+/* Navbar styling */
+.navbar {
+  background: var(--dark-bg);
+  top: 32px;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+/* 1. Base fixed positioning & sizing */
+.navbar.custom-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1050;
+    padding: 0.5rem 1rem;
+    
+    backdrop-filter: blur(8px);            /* subtle blur behind */
+    background-color: rgba(44, 62, 80, 1);  /* full opaque on hover or scroll */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* 2. Hover / scroll effect */
+  .navbar.custom-nav:hover,
+  .navbar.custom-nav.scrolled {
+    background-color: rgba(44, 62, 80, 1);  /* full opaque on hover or scroll */
+    transform: translateY(-2px);
+  }
+  
+  /* 3. Link styling */
+  .navbar.custom-nav .nav-link {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .navbar.custom-nav .nav-link:hover {
+    background-color: var(--primary-color);
+    color: #fff !important;
+  }
+  
+  /* 4. Toggler styling */
+  .navbar.custom-nav .navbar-toggler {
+    border-color: var(--primary-color);
+    transition: transform 0.3s;
+  }
+  .navbar.custom-nav .navbar-toggler:hover {
+    transform: scale(1.1);
+  }
+
+/* FAQ Page Styles */
+body {
+  background-color: var(--light-bg);
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 100px; /* Adjust for announcement + navbar */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Accordion button styles */
+.accordion-button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  background-color: var(--primary-color); /* Fill color remains #2ECC71 */
+  color: white; /* Keep text white */
+  border: 1px solid var(--dark-bg);
+  padding: 15px;
+  transition: background-color 0.3s ease;
+}
+
+/* Accordion button styles when expanded */
+.accordion-button:not(.collapsed) {
+  background-color: var(--primary-color); /* Keep color same when expanded */
+  color: white; /* Text remains white when expanded */
+}
+
+/* Hover effect on the button */
+.accordion-button:hover {
+  background-color: var(--primary-color); /* Maintain #2ECC71 color */
+  color: white; /* Text remains white on hover */
+}
+
+/* Accordion content */
+.accordion-body {
+  background-color: var(--light-bg);
+  color: #333;
+  padding: 15px;
+}
+
+/* FAQ Section Styles */
+.faq-section {
+  background: white;
+  padding: 50px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h2 {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+.quick-link-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .arrow {
+    color: white;
+    font-size: 1.2em;
+    animation: pulse 2s infinite;
+  }
+  
+  .quick-link {
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .quick-link::before {
+    content: "✨";
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .quick-link:hover::before {
+    opacity: 1;
+  }
+  
+  .quick-link:hover {
+    color: #ffd700;
+    text-shadow: 0 0 5px white;
+  }
+
+
+   /* Social Links */
+   .social-links a {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    padding: -10px;
+  }
+  
+  /* Hover Effect for WhatsApp, Facebook, and Instagram */
+  .social-links a:hover {
+    transform: scale(1.1);  /* Slight zoom effect on hover */
+  }
+  
+  /* Specific hover effects for individual social links */
+  .social-links a.facebook:hover {
+    color: #3b5998;  /* Facebook color */
+  }
+  
+  .social-links a.instagram:hover {
+    color: #E4405F;  /* Instagram color */
+  }
+  
+  .social-links a.whatsapp:hover {
+    color: #25D366;  /* WhatsApp color */
+  }

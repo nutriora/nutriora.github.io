@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutriora | Personalized Nutrition Plans By Saira Zaman</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <i class="fas fa-bullhorn announcement-icon"></i>
+    Free Consultancy
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-nav">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fas fa-seedling me-2"></i>Nutriora</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#clients">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#nutrition-tips">Nutrition Tips</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Success Stories</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container text-center text-white">
+      <h1 class="display-4 fw-bold mb-3">Nutriora</h1>
+      <p class="lead mb-4">By Saira Zaman</p>
+      <h2 class="mb-5">Your Journey to Better Health Starts Here</h2>
+      <a href="#clients" class="btn btn-lg gradient-btn px-5 py-3">Start Your Journey</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    <!-- Client Registration Form -->
+    <section class="row justify-content-center mb-5" id="clients">
+      <div class="col-12 col-lg-8">
+        <div class="card shadow-lg border-0">
+          <div class="card-body p-4">
+            <h2 class="text-center mb-4 text-success"><i class="fas fa-user-plus me-2"></i>Client Registration</h2>
+            <form id="clientForm" action="" method="POST">
+              <div class="row">
+                <!-- Full Name -->
+                <div class="col-md-6 mb-4 position-relative">
+                  <i class="fas fa-user input-icon"></i>
+                  <input type="text" class="form-control ps-5 field" name="name" placeholder="Full Name" required>
+                </div>
+                <!-- Gender -->
+                <div class="col-md-6 mb-4 position-relative">
+                  <i class="fas fa-venus-mars input-icon"></i>
+                  <select class="form-select ps-5 field" name="gender" required>
+                    <option value="" disabled selected>Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <!-- Age -->
+                <div class="col-md-6 mb-4 position-relative">
+                  <i class="fas fa-calendar-alt input-icon"></i>
+                  <input type="number" class="form-control ps-5 field" name="age" placeholder="Age" min="1" required>
+                </div>
+                <!-- Medical Condition -->
+                <div class="col-md-6 mb-4 position-relative">
+                  <i class="fas fa-notes-medical input-icon"></i>
+                  <input type="text" class="form-control ps-5 field" name="medical_condition"
+                    placeholder="Medical Condition (if any)">
+                </div>
+              </div>
+              <div class="row">
+                <!-- Weight -->
+                <div class="col-md-6 mb-4 position-relative">
+                  <i class="fas fa-weight input-icon"></i>
+                  <input type="number" class="form-control ps-5 field" name="weight" placeholder="Weight (kg)" min="1"
+                    required>
+                </div>
+                <!-- Height -->
+                <div class="col-md-6 mb-4 position-relative">
+                  <i class="fas fa-ruler-vertical input-icon"></i>
+                  <input type="getHeightInFeet()" ; " 
+                  class=" form-control ps-5 field" name="height" placeholder="Height (ft)" min="1" required>
+                </div>
+              </div>
+              <div class="row">
+                <!-- Goal -->
+                <div class="col-12 mb-4 position-relative">
+                  <i class="fas fa-bullseye input-icon"></i>
+                  <select class="form-select ps-5 field" name="goal" required>
+                    <option value="" disabled selected>Select Your Goal</option>
+                    <option>Weight Loss</option>
+                    <option>Muscle Gain</option>
+                    <option>Maintenance</option>
+                    <option>Improved Energy</option>
+                    <option>Better Digestion</option>
+                    <option>PCOS / Thyroid Management</option>
+                    <option>Clear Skin & Gut Health</option>
+                    <option>Pregnancy & Postpartum Care</option>
+                    <option>Kids & Teen Nutrition</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <!-- Contact Number -->
+                <div class="col-md-6 mb-4 position-relative">
+                  <i class="fas fa-phone input-icon"></i>
+                  <input type="tel" class="form-control ps-5 field" name="phone" placeholder="Contact Number" required>
+                </div>
+                <!-- Email Address -->
+                <div class="col-md-6 mb-4 position-relative">
+                  <i class="fas fa-envelope input-icon"></i>
+                  <input type="email" class="form-control ps-5 field" name="email" placeholder="Email Address" required>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn gradient-btn w-50 py-3">
+                  <span class="submit-text">Register Now</span>
+                  <span class="spinner-border spinner-border-sm d-none"></span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+
+  <!-- Nutrition Tips Section -->
+  <section class="my-5 py-5" id="nutrition-tips">
+    <div class="container">
+      <h2 class="text-center mb-5"><i class="fas fa-lightbulb me-2"></i>Nutrition Tips</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card nutrition-card shadow-sm h-100 border-0">
+            <img
+              src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
+              class="card-img-top" alt="Balanced Diet">
+            <div class="card-body">
+              <div class="nutrition-icon text-center">
+                <i class="fas fa-apple-alt"></i>
+              </div>
+              <h5 class="card-title text-center">Eat the Rainbow</h5>
+              <p class="card-text">Include a variety of colorful fruits and vegetables in your diet to ensure you're
+                getting a wide range of nutrients. Different colors provide different health benefits.</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item border-0"><i class="fas fa-check-circle text-success me-2"></i>Red foods
+                  support heart health</li>
+                <li class="list-group-item border-0"><i class="fas fa-check-circle text-success me-2"></i>Orange foods
+                  boost immunity</li>
+                <li class="list-group-item border-0"><i class="fas fa-check-circle text-success me-2"></i>Green foods
+                  aid digestion</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card nutrition-card shadow-sm h-100 border-0">
+            <img
+              src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              class="card-img-top" alt="Hydration">
+            <div class="card-body">
+              <div class="nutrition-icon text-center">
+                <i class="fas fa-glass-water"></i>
+              </div>
+              <h5 class="card-title text-center">Hydration Matters</h5>
+              <p class="card-text">Water supports digestion, clear skin, and overall energy. Small, consistent habits
+                can make a big difference in your hydration.</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item border-0"><i class="fas fa-check-circle text-success me-2"></i>Start with 1-2
+                  glasses in the morning</li>
+                <li class="list-group-item border-0"><i class="fas fa-check-circle text-success me-2"></i>Drink 8-10
+                  glasses daily</li>
+                <li class="list-group-item border-0"><i class="fas fa-check-circle text-success me-2"></i>Eat water-rich
+                  foods like cucumbers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card nutrition-card shadow-sm h-100 border-0">
+            <img
+              src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              class="card-img-top" alt="Meal Planning">
+            <div class="card-body">
+              <div class="nutrition-icon text-center">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <h5 class="card-title text-center">Mindful Eating</h5>
+              <p class="card-text">Slow down and pay attention to your food. Mindful eating can help with digestion and
+                prevent overeating.</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item border-0"><i class="fas fa-check-circle text-success me-2"></i>Chew each bite
+                  20-30 times</li>
+                <li class="list-group-item border-0"><i class="fas fa-check-circle text-success me-2"></i>Eliminate
+                  distractions during meals</li>
+                <li class="list-group-item border-0"><i class="fas fa-check-circle text-success me-2"></i>Listen to your
+                  body's hunger cues</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Stories Section -->
+  <section class="my-5 py-5 bg-light rounded-3" id="testimonials">
+    <div class="container">
+      <h2 class="text-center mb-5"><i class="fas fa-star me-2"></i>Success Stories</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card testimonial-card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex mb-3">
+                <img
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                  class="rounded-circle me-3" width="80" height="80" alt="Client">
+                <div>
+                  <h5 class="mb-0">Sarah Haider</h5>
+                  <p class="text-muted">Lost 18kg in 4 months</p>
+                  <div class="text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="card-text">"After years of struggling with my weight, the personalized nutrition plan helped me
+                understand my body's needs. I lost 18kg in just 4 months and have kept it off for over a year now. The
+                best part? I never felt deprived!"</p>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-quote-left text-muted me-2"></i>
+                <small class="text-muted">Started her journey March 2024</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card testimonial-card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex mb-3">
+                <img
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                  class="rounded-circle me-3" width="80" height="80" alt="Client">
+                <div>
+                  <h5 class="mb-0">Touseef Iqbal</h5>
+                  <p class="text-muted">Gained 10kg muscle</p>
+                  <div class="text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="card-text">"As a fitness enthusiast, I was struggling to gain muscle despite rigorous training.
+                The customized meal plan with proper macronutrient ratios helped me gain 10kg of lean muscle in 6 months
+                while reducing body fat percentage."</p>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-quote-left text-muted me-2"></i>
+                <small class="text-muted">Started his journey January 2023</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card testimonial-card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex mb-3">
+                <img
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                  class="rounded-circle me-3" width="80" height="80" alt="Client">
+                <div>
+                  <h5 class="mb-0">Ayesha Khalid</h5>
+                  <p class="text-muted">Reversed prediabetes</p>
+                  <div class="text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="card-text">"After being diagnosed with prediabetes, the nutrition program helped me completely
+                reverse my condition in 8 months. My HbA1c dropped from 6.2 to 5.4, and I've never felt more energetic
+                in my life!"</p>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-quote-left text-muted me-2"></i>
+                <small class="text-muted">Started her journey August 2025</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body bg-success text-white">
+      Form submitted successfully!
+    </div>
+  </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5><i class="fas fa-seedling me-2"></i>Nutriora</h5>
+          <p>By Saira Zaman</p>
+          <p class="fst-italic">“Nutrition that understands you”</p>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="quick-link-item"><span class="arrow"></span><a href="#clients" class="quick-link">Register</a>
+            </li>
+            <li class="quick-link-item"><span class="arrow"></span><a href="#nutrition-tips"
+                class="quick-link">Nutrition Tips</a></li>
+            <li class="quick-link-item"><span class="arrow"></span><a href="#testimonials" class="quick-link">Success
+                Stories</a></li>
+          </ul>
+
+
+
+        </div>
+        <div class="col-md-4">
+          <h5>Connect With Us</h5>
+          <div class="social-links">
+            <a class="instagram" href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+            <a class="facebook" href="#" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+            <a class="whatsapp" href="//wa.me/923310467538" class="text-white"><i class="fab fa-whatsapp fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="text-center">
+        <p class="mb-0">&copy; 2023 Nutriora. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="index.js"></script>
+
+</body>
+
+</html>
