@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="style.css">
 
   <link rel="icon" href="favicon.png" type="image.png">
+  <!-- Add this to your head section -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
@@ -236,6 +238,136 @@
     </div>
   </section>
 
+  <!-- Nutrition facts  -->
+  <section class="py-5 facts-section">
+    <div class="container">
+      <h2 class="text-center mb-5 section-title"><i class="fas fa-chart-pie me-2"></i>Nutrition Facts</h2>
+
+      <div class="row g-4">
+        <!-- Macronutrients -->
+        <div class="col-md-4">
+          <div class="fact-card">
+            <div class="fact-icon">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <h3>Macronutrients</h3>
+            <div class="chart-container">
+              <canvas id="macroChart"></canvas>
+            </div>
+            <div class="fact-details">
+              <p>Balanced diet should include:</p>
+              <ul>
+                <li><strong>45-65%</strong> Carbohydrates</li>
+                <li><strong>20-35%</strong> Fats</li>
+                <li><strong>10-35%</strong> Proteins</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Water Intake -->
+        <div class="col-md-4">
+          <div class="fact-card">
+            <div class="fact-icon">
+              <i class="fas fa-tint"></i>
+            </div>
+            <h3>Water Intake</h3>
+            <div class="chart-container">
+              <canvas id="waterChart"></canvas>
+            </div>
+            <div class="fact-details">
+              <p>Daily recommended water intake:</p>
+              <ul>
+                <li><strong>3.7L</strong> for men</li>
+                <li><strong>2.7L</strong> for women</li>
+                <li>Includes fluids from food</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vitamin Sources -->
+        <div class="col-md-4">
+          <div class="fact-card">
+            <div class="fact-icon">
+              <i class="fas fa-apple-alt"></i>
+            </div>
+            <h3>Vitamin Sources</h3>
+            <div class="vitamin-animation">
+              <div class="vitamin-item" data-vitamin="A">
+                <span>Vitamin A</span>
+                <div class="source">Carrots, Sweet Potatoes</div>
+              </div>
+              <div class="vitamin-item" data-vitamin="C">
+                <span>Vitamin C</span>
+                <div class="source">Citrus, Bell Peppers</div>
+              </div>
+              <div class="vitamin-item" data-vitamin="D">
+                <span>Vitamin D</span>
+                <div class="source">Sunlight, Fatty Fish</div>
+              </div>
+            </div>
+            <div class="fact-details">
+              <p>Essential vitamins and their sources</p>
+              <button class="btn btn-sm gradient-btn mt-2" id="animateVitamins">Show More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Stats Section -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <h2 class="section-title text-center mb-4"><i class="fas fa-chart-line me-2"></i>Our Impact</h2>
+
+      <div class="row g-3"> <!-- Reduced gutter spacing -->
+        <!-- Happy Clients -->
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="stat-number" data-count="178">0</h3>
+            <p class="stat-label">Happy Clients</p>
+          </div>
+        </div>
+
+        <!-- Kilos Lost -->
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-weight"></i>
+            </div>
+            <h3 class="stat-number" data-count="237">0</h3>
+            <p class="stat-label">Kilos Lost</p>
+          </div>
+        </div>
+
+        <!-- Years Experience -->
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <h3 class="stat-number" data-count="3">0</h3>
+            <p class="stat-label">Years Experience</p>
+          </div>
+        </div>
+
+        <!-- Success Rate -->
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3 class="stat-number" data-count="98">0</h3>
+            <p class="stat-label">Success Rate</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Success Stories Section -->
   <section class="my-5 py-5 bg-light rounded-3" id="testimonials">
     <div class="container">
@@ -358,6 +490,7 @@
                 class="quick-link">Nutrition Tips</a></li>
             <li class="quick-link-item"><span class="arrow"></span><a href="#testimonials" class="quick-link">Success
                 Stories</a></li>
+
           </ul>
 
 
@@ -366,18 +499,22 @@
         <div class="col-md-4">
           <h5>Connect With Us</h5>
           <div class="social-links">
-            <a class="instagram" href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
-            <a class="facebook" href="#" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
-            <a class="whatsapp" href="//wa.me/923310467538" class="text-white"><i class="fab fa-whatsapp fa-lg"></i></a>
+            <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+            <a href="//wa.me/923310467538" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+
           </div>
         </div>
+        <hr class="my-4">
+        <div class="text-center">
+          <p class="mb-0">&copy; 2023 Nutriora. All rights reserved.</p>
+        </div>
       </div>
-      <hr class="my-4">
-      <div class="text-center">
-        <p class="mb-0">&copy; 2023 Nutriora. All rights reserved.</p>
-      </div>
-    </div>
   </footer>
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
